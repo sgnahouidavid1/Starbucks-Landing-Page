@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Custom CSS Variables*/
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+    --tertiary-font: 'Montserrat', sans-serif;
+    --white-color: white; 
+    --black-color: black;
+    --semilight-black: #302f2f; /* A semi-light black for text */
+    --primary-color: #00704A; /* Starbucks Green */
+    --semidark-white: #b1aeae; /* A light shade of white */
+}
+
+body {
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    line-height: 1.5;
+    background: var(--white-color);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background: var(--white-color);
+    padding: 20px 40px;
+    position:fixed;
+    top: 0px;
+    right:0px;
+    left: 0px;
+    border-bottom: 1px solid #ccc;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between logo and menu */
+}
+
+.navbar .menu-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none; /* Remove default list style */
+}
+.navbar .nav-menu .nav-links {
+    display: flex;
+    gap: 30px; /* Space between menu items */
+}
+
+.navbar .nav-menu .nav-links li a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+    transition: 0.5s;
+    padding: 0px 20px;
+}
+
+.navbar .nav-menu .nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.navbar .menu-buttons li a {
+    padding: 20px 0px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+    transition: 0.5s;
+}
+
+.navbar .menu-buttons li:nth-child(1) a:hover {
+    color: var(--primary-color);
+}
+
+.navbar .menu-buttons li:nth-child(1) {
+    margin-right: 80px;
+}
+
+.navbar .menu-buttons li:nth-child(1) a i {
+    margin-right: 10px;
+}
+.navbar .menu-buttons li .btn {
+    padding: 10px 20px;
+}
+/* Button Styles */
+.btn {
+    border: var(--black-color) solid 1px;
+    border-radius: 40px;
+    font-size: 700;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-light {
+    background: var(--white-color);
+    color: var(--black-color);
+    &:hover {
+        background: var(--semidark-white);
+    }
+}
+.btn-dark {
+    background: var(--black-color);
+    color: var(--white-color);
+    &:hover {
+        background: var(--semilight-black);
+    }
+}
+
