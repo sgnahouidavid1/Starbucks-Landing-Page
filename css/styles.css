@@ -11,9 +11,11 @@
     --tertiary-font: 'Montserrat', sans-serif;
     --white-color: white; 
     --black-color: black;
-    --semilight-black: #302f2f; /* A semi-light black for text */
-    --primary-color: #00704A; /* Starbucks Green */
-    --semidark-white: #b1aeae; /* A light shade of white */
+    --darkprince-color: #6b6b87; /* Dark Prince */
+    --semilight-black: #333; /* Semi-light black */
+    --starbucks-green: #00704a; /* Starbucks Green */
+    --palmleaf-green: #32462f; /* Palm Leaf Green */
+    --crystalpalace: #d1d1aa; /* Crystal Palace */
 }
 
 body {
@@ -21,7 +23,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background: var(--white-color);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 a {
@@ -42,11 +44,7 @@ img {
     width: 100%;
     background: var(--white-color);
     padding: 20px 40px;
-    position:fixed;
-    top: 0px;
-    right:0px;
-    left: 0px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; /* Light gray border line */
 }
 .navbar .container {
     display: flex;
@@ -58,7 +56,10 @@ img {
     align-items: center;
     gap: 40px; /* Space between logo and menu */
 }
-
+.navbar .nav-menu img {
+    max-width: 64px; /* Adjust logo size */
+    max-height: 64px; /* Adjust logo size */
+}
 .navbar .menu-buttons {
     display: flex;
     align-items: center;
@@ -79,56 +80,221 @@ img {
 }
 
 .navbar .nav-menu .nav-links li a:hover {
-    color: var(--primary-color);
+    color: var(--starbucks-green);
 }
 
-.navbar .menu-buttons li a {
-    padding: 20px 0px;
+.navbar .menu-buttons li .find-loc{
+    padding: 20px 20px;
     font-size: 1.1rem;
     font-weight: 700;
     display: block;
-    transition: 0.5s;
+    transition: 0.5s;;
 }
-
-.navbar .menu-buttons li:nth-child(1) a:hover {
-    color: var(--primary-color);
-}
-
-.navbar .menu-buttons li:nth-child(1) {
-    margin-right: 80px;
-}
-
-.navbar .menu-buttons li:nth-child(1) a i {
+.navbar .menu-buttons li a i {
     margin-right: 10px;
 }
-.navbar .menu-buttons li .btn {
-    padding: 10px 20px;
+.navbar .menu-buttons li:nth-child(1) a:hover {
+    color: var(--starbucks-green);
 }
-/* Button Styles */
+
+
+
+
+/* Box One Section */  
+.box {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Utility Classes */
+/* Grid Styles Classes */
+.grid-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* Space between columns image and text */ 
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between columns */
+    box-shadow: rgba(17, 17, 46, 0.15) 0px 48px 100px 0px; /* Shadow effect */
+}
+/* Reverse grid order of the Image and Text box */
+.grid-reverse :first-child {
+    order: 2;
+    /* Reverse the order of the first child */
+}
+/* Important Information Section */
+.important-information {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc; /* Light gray border line */
+}
+.important-information p:first-child {
+    padding: 2% 25% 0px;
+    font-weight: 500;
+}
+.important-information p:last-child {
+    padding: 5% 25% 0px;
+    font-weight: 500;
+}
+.important-information p:last-child a {
+    text-decoration: underline;
+}
+
+/* Footer Styles Section */
+.footer {
+    padding: 10px 30px;
+    border-bottom: 1px solid #ccc;/* Light gray border line */
+}
+.footer .footer-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Space between columns */
+}
+.footer ul li {
+    padding: 20px 0px;
+}
+.footer ul li .link {
+    color: var(--darkprince-color);
+}
+
+.footer ul li .link:hover {
+    color: var(--black-color);
+    transition: 0.5s ease-in; /* Smooth hover effect */
+}
+.footer .link-container  li {
+    padding: 10px 0px;
+}
+.footer ul li .other-link {
+    color: var(--black-color);
+}
+
+.footer ul li .other-link:hover {
+    text-decoration: underline;
+}
+
+.footer .icon-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 20px; /* Space between icons */
+    padding-top: 20px
+}
+.footer .icon-container img {
+    width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
+    transition: transform 0.3s ease; /* Smooth hover effect
+    using transform to up scale the icon image*/
+} 
+
+.footer .icon-container img:hover {
+    transform: scale(1.5); /* Scale up img when hovering using the transform property */
+}
+
+/* Button Styles Classes */
 .btn {
-    border: var(--black-color) solid 1px;
-    border-radius: 40px;
-    font-size: 700;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: none;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    padding: 10px 20px;
+    line-height: 1.2;
+    padding: 7px 13px;
     cursor: pointer;
     transition: 0.5s;
+    border: 1px solid var(--black-color);
 }
 
-.btn-light {
-    background: var(--white-color);
+.btn-dark-outline {
+    border-color: var(--black-color);
     color: var(--black-color);
-    &:hover {
-        background: var(--semidark-white);
-    }
 }
-.btn-dark {
-    background: var(--black-color);
+.btn-light-outline {
+    border-color: var(--white-color);
     color: var(--white-color);
-    &:hover {
-        background: var(--semilight-black);
-    }
+}
+.btn-dark { 
+    color: var(--white-color);
+    background: var(--black-color);
 }
 
+.btn-palmleaf-outline {
+    border-color: var(--palmleaf-green);
+    color: var(--palmleaf-green);
+}
+/* Button Hover Effects */
+.btn-dark-outline:hover , .btn-palmleaf-outline:hover, .btn-light-outline:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.btn-dark:hover {
+    background-color: var(--semilight-black);
+}
+/* Text Styles Classes */
+.text-center {
+    text-align: center;
+    padding: 0px 13%;
+}
+.text-xl {
+    font-size: 50px;
+    font-weight: 700;
+    
+}
+.text-lg {
+    font-size: 28px;
+    font-weight: 700;
+    
+}
+
+span {
+    font-weight: 800;
+}
+
+.text-md {
+    font-size: 24px;
+    padding: 40px 0px;
+    font-weight: 400;
+    
+
+}
+.text-xmd{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.text-sm {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Background Color Classes */
+.bg-palmleaf-green {
+    background: var(--palmleaf-green);
+    color: var(--white-color);
+}
+
+.bg-starbucks-green {
+    background: var(--starbucks-green);
+    color: var(--white-color);
+}
+.bg-crystalpalace {
+    background: var(--crystalpalace);
+    color: var(--palmleaf-green);
+}
+
+/* Trademark Styles Classes */
+.REGISTERED-TRADEMARK::after /* Adds a registered trademark symbol */ {
+    content: "\00AE"; /* Unicode for ® */
+    font-size: 0.8em;
+    vertical-align: super; /* Aligns the trademark symbol to the top */
+}
+
+.COPYRIGHT-TRADEMARK::after /* Adds a copyright symbol */ {
+    content: "\00A9"; /* Unicode for © */;
+} 
+/* Media Queries */
+@media (min-width: 1440px) {
+    .box {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
