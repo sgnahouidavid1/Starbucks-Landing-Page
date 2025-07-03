@@ -15,8 +15,8 @@ and a little of javascript to create the hamburger menu, the Footer links accord
   - Css transformations, X/Y Translations, Rotating, and Transition
 
 ## Demo-Video:
+#### Click to play video
 [![Watch the video](https://img.youtube.com/vi/wCPANKT3al8/maxresdefault.jpg)](https://youtu.be/wCPANKT3al8)
-### [Starbucks Website Clone](https://youtu.be/wCPANKT3al8)
 
 
 
