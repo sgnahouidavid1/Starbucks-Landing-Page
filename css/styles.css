@@ -146,13 +146,13 @@ img {
 
 /* Rotate the hamburger lines when the button is clicked */
 .hamburger-button.open .hamburger-line-top {
-    transform: rotate(225deg) translateY(-6px) translateX(-6px); /* Rotate the top line to form an X */
+    transform: rotate(45deg) translateY(6px) translateX(6px); /* Rotate the top line to form an X */
 } 
 .hamburger-button.open .hamburger-line-middle {
     display: none; /* Hide the middle line when the button is open */
 }
 .hamburger-button.open .hamburger-line-bottom {
-    transform: rotate(-45deg) translateY(6px) translateX(-6px); /* Rotate the bottom line to form an X */
+    transform: rotate(-225deg) translateY(-6px) translateX(6px); /* Rotate the bottom line to form an X */
 }
 
 /* Mobile Menu Styles Section */
@@ -406,6 +406,9 @@ span {
         max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .mobile-menu {
+        display: none; /* Hide mobile menu on larger screens */
     }
 }
 
