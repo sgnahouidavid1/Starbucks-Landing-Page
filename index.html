@@ -32,26 +32,44 @@
 </head>
 <body>
     <!-- Navigation Bar  Section-->
-     <nav class="navbar">
+    <nav class="navbar">
         <div class="container">
             <div class="nav-menu">
                 <a href="index.html"><img src ="images/starbucks-logo.png" alt="Starbucks Image Logo"></a>
-                <ul class="nav-links">
-                    <li><a href="index.html">MENU</a></li>
-                    <li><a href="index.html">REAWARDS</a></li>
-                    <li><a href="index.html">GIFT CARDS</a></li>
-                </ul>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">MENU</a></li>
+                        <li><a href="index.html">REAWARDS</a></li>
+                        <li><a href="index.html">GIFT CARDS</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="menu-buttons">
                 <li><a href="index.html" class="find-loc"><i class="fa-solid fa-location-dot"></i>Find stores</a></li>
                 <li><a class="btn btn-dark-outline" href="index.html">Sign in</a></li>
                 <li><a class="btn btn-dark" href="index.html">Join now</a></li>
-                
             </div>
             <!-- Hamburger Menu Button Section -->
-            
+            <button class="hamburger-button" type="button" id="menu-btn">
+                <span class="hamburger-line-top"></span>
+                <span class="hamburger-line-middle"></span>
+                <span class="hamburger-line-bottom"></span>
+            </button>
         </div>
-     </nav>
+    </nav>
+    <!-- Mobile Menu Section -->
+    <div class="mobile-menu hidden" id="menu">
+        <ul>
+            <li><a href="index.html">MENU</a></li>
+            <li><a href="index.html">REAWARDS</a></li>
+            <li><a href="index.html">GIFT CARDS</a></li>
+        </ul>
+        <div class="mobile-menu-bottom">
+            <a href="index.html" class="find-loc"><i class="fa-solid fa-location-dot"></i>Find stores</a>
+            <button class="btn btn-dark-outline" href="index.html">Sign in</button>
+            <button class="btn btn-dark" href="index.html">Join now</button>
+        </div>
+    </div>
      <!-- Box A Section -->
     <section class="box">
         <div class="box-container box-a bg-palmleaf-green  grid-col-2">
@@ -113,7 +131,7 @@
     
     <!-- Box E Section -->
     <section class="box">
-        <div class="box-container box-e bg-starbucks-green grid-col-2">
+        <div class="box-container box-e bg-palmleaf-green grid-col-2">
             <img src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-99432.jpg" alt="" >
             <div class="text-box text-center">
                 <h2 class="text-box-heading text-xl">Free refills while you stay.</h1>

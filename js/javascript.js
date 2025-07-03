@@ -33,3 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* Hamburger rotation javascript code */
+/* Getting the hamburger button Id using getElementById() function */
+const btn = document.getElementById('menu-btn')
+/* Getting the mobile menu Id using getElementById() function */
+const nav = document.getElementById('menu')
+function navToggle() {
+    btn.classList.toggle('open'); /* toggles attaching the open class onto the hamburger-button class */
+    nav.classList.toggle('hidden'); /* toggles attaching the hidden class onto the mobile-menu class */
+    document.body.classList.toggle('no-scroll'); /* toggles attaching the no-scroll class onto the body element to prevent scrolling when the menu is open */
+    /* This is to prevent the body from scrolling when the menu is open */
+}
+btn.addEventListener('click', navToggle)

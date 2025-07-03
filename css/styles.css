@@ -46,7 +46,7 @@ img {
 .navbar {
     width: 100%;
     background: var(--white-color);
-    padding: 20px 40px;
+    padding: 20px 40px 30px;
     position: fixed;
     top: 0;
     left: 0;
@@ -74,7 +74,7 @@ img {
     gap: 20px;
     list-style: none; /* Remove default list style */
 }
-.navbar .nav-menu .nav-links {
+.navbar .nav-links  ul {
     display: flex;
     gap: 30px; /* Space between menu items */
 }
@@ -105,13 +105,113 @@ img {
     color: var(--starbucks-green);
 }
 
+/* Hamburger Menu */
+.hamburger-button {
+    display: none; /* Hide hamburger button by default */
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: relative;
+    padding: 10px;
+    margin-right: 10px; /* Adjust margin for hamburger button */
+    z-index: 1001; /* Ensure hamburger button is above other content */
+    transition: all 0.25s; /* Smooth transition for hover effect */
+}
+.hamburger-line-top,
+.hamburger-line-middle,
+.hamburger-line-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    background: var(--starbucks-green);
+    border-radius: 5px;
+    transform: rotate(0);
+    transition: all 0.3s; /* Smooth transition for hamburger lines */
+}
+/* Repositioning the hamburger lines allow the hamburger button to be shown. */
+.hamburger-line-middle {
+    transform: translateY(7px); /* Position the middle line on the Y-axis downwards 7 pixels */
+}
 
+.hamburger-line-bottom {
+    transform: translateY(14px); /* Position the bottom line on the Y-axis downwards 14 pixels */
+}
 
+.hamburger-button.open .hamburger-line-top,
+.hamburger-button.open .hamburger-line-bottom {
+    background: var(--semilight-black); /* Change color of hamburger lines when open */
+}
+
+/* Rotate the hamburger lines when the button is clicked */
+.hamburger-button.open .hamburger-line-top {
+    transform: rotate(225deg) translateY(-6px) translateX(-6px); /* Rotate the top line to form an X */
+} 
+.hamburger-button.open .hamburger-line-middle {
+    display: none; /* Hide the middle line when the button is open */
+}
+.hamburger-button.open .hamburger-line-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px); /* Rotate the bottom line to form an X */
+}
+
+/* Mobile Menu Styles Section */
+.mobile-menu {
+    position: fixed;
+    top: 120px; /* Position below the navbar */
+    right: 0px;
+    width: 80%;
+    color: var(--black-color);
+    height: 100%;
+    background-color: var(--white-color);
+    padding: 30px;
+    box-shadow: inset 0 4px 3px  -3px rgb(0 0 0 / 10%), /* Inner shadow effect */
+    inset 0 -4px 3px -3px rgb(0 0 0 / 10%); /* Inner shadow effect */ 
+    transition: all 0.3s; /* Smooth transition for showing/hiding the menu */
+    z-index: 1002; /* Ensure mobile menu is above other content */
+}
+
+.hidden {
+    transform: translateX(100%); /* Hide the mobile menu off-screen */
+}
+.no-scroll {
+    overflow: hidden; /* Prevent scrolling when the mobile menu is open */
+}
+
+.mobile-menu ul {
+    line-height: 3;
+    font-weight: 700;
+    border-bottom: #777 solid 1px; /* Light gray border line */
+    padding-bottom: 20px;
+    margin-bottom: 30px; /* Space between menu items and bottom section */
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.mobile-menu a:hover {
+    color: var(--starbucks-green);
+    transition: 0.5s ease-in; /* Smooth hover effect */
+}
+.mobile-menu .mobile-menu-bottom {
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: 140px;
+    gap: 25px;
+}  
+.mobile-menu i {
+    margin-right: 10px;
+}
+
+.mobile-menu .btn {
+    font-size: 20px;
+}
 
 /* Box One Section */  
 .box {
     margin-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 /* Utility Classes */
@@ -309,6 +409,8 @@ span {
     }
 }
 
+
+
 @media (max-width: 1130px) {
     .text-xl {
         font-size: 35px;
@@ -358,8 +460,17 @@ span {
     .footer .link-group.open {
         display: block; /* Show the links when the group is open */
     }
+    .navbar .nav-links, .navbar .menu-buttons {
+        display: none; /* Hide the navigation menu and buttons on smaller screens */
+    }
+    .box {
+        margin-top: 0px; /* Remove margin-top for Boxes Section on smaller screens */
+        padding-bottom: 0px; /* Remove padding bottom for Boxes Section on smaller screens */ 
+    }
 
-
+    .hamburger-button {
+        display: block; /* Show hamburger button on smaller screens */
+    }
 
 }
 
