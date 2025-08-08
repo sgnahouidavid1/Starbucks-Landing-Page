@@ -45,4 +45,4 @@ function navToggle() {
     document.body.classList.toggle('no-scroll'); /* toggles attaching the no-scroll class onto the body element to prevent scrolling when the menu is open */
     /* This is to prevent the body from scrolling when the menu is open */
 }
-btn.addEventListener('click', navToggle)
+btn.addEventListener('click', navToggle);

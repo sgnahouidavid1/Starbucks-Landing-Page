@@ -18,6 +18,7 @@
     --crystalpalace: #d1d1aa; /* Crystal Palace */
     --estragon: #a5af73; /* Estragon */
     --crystalpalace-estragon: linear-gradient(to right, var(--crystalpalace), var(--estragon)); /* Gradient background */
+    --colorGreenAccent: #00754a; /* Green Accent */
 }
 
 body {
@@ -104,7 +105,7 @@ img {
 .navbar .menu-buttons li:nth-child(1) a:hover {
     color: var(--starbucks-green);
 }
-
+/* Home Page */
 /* Hamburger Menu */
 .hamburger-button {
     display: none; /* Hide hamburger button by default */
@@ -207,11 +208,329 @@ img {
 .mobile-menu .btn {
     font-size: 20px;
 }
+/* Sign In Page  */
+
+.signIn-section {
+    padding: 50px 0px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px; /* Space between title and card */
+
+}
+.signIn-section span {
+    color: var(--colorGreenAccent); 
+}
+
+.signIn-section .signInTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black-color);
+
+}
+.signIn-section .signIn-Card {
+    width: 500px;
+    height: 510px;
+    padding: 30px 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px #00000012, 0 4px 5px #0000000f, 0 1px 10px #0000001a;/* Shadow effect */
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #ccc; /* Light gray border line */
+
+}
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container {
+    text-align: start;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container #signIn_ChkBox[type="checkbox"] {
+   opacity: 0;
+}
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container #signIn_ChkBox[type="checkbox"] + label {
+   display: inline-block;
+   position: relative;
+   padding-left: 15px;
+   cursor: pointer;
+   color:var(--darkprince-color);
+}
+
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container #signIn_ChkBox[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid var(--darkprince-color);
+    background: white;
+    border-radius: 2px;
+}
+
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container #signIn_ChkBox[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid var(--starbucks-green);
+    background: white;
+    border-radius: 2px;
+}
+
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container #signIn_ChkBox[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid var(--starbucks-green);
+    background-image: url(../images/checkMark.png); /* Checkmark icon image png */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2px;
+    transform: scale(1); /* Scale the checkmark icon */
+    opacity: 1;
+    transition: all .3s ease; /* Smooth transition for the checkmark icon */
+}
+
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container #signIn_ChkBox[type="checkbox"]:not(:checked) + label::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid var(--starbucks-green);
+    background-image: url(../images/checkMark.png);/* Checkmark icon image png */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2px;
+    transform: scale(0); /* Hide the checkmark icon when not checked */
+    opacity: 0;
+}
+
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container a{
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--starbucks-green);
+    transition: all 0.5s ease-in-out;
+}
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container a:hover {
+    text-decoration: none;
+}
+.signIn-section .signIn-Card #signInForm .signIn_ChkBox_container .forget_your_username {
+    margin: 10px 0px;
+    display: block;
+}
+
+.signIn-section .signIn-Card #signInForm .signIn_btn {
+    margin-top: 10px;
+    width: 25%;
+    background: var(--starbucks-green);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin-left: 78%;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 20px;
+    border-color: var(--darkprince-color);
+    box-shadow: 0 2px 4px #00000012, 0 4px 5px #0000000f, 0 1px 10px #0000001a; /* Shadow effect */
+    
+}
+.signIn-section .signIn-Card p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--darkprince-color);
+    padding-bottom: 10px;
+    text-align: start;
+}
+.signIn-section .signIn-Card .falseSign {
+    justify-content: center;
+    align-self: start;
+    display: none; /* Hide the false sign by default */
+}
+
+
+.signIn-section .signIn-Card .falseSign svg {
+    padding-top: 6px;
+    scale: 1.4;
+}
+
+.signIn-section .signIn-Card .form-control {
+    height: 70px;
+    text-align: start;
+    position: relative; /* Position relative for the input field */
+}
+
+
+.signIn-section .signIn-Card #emailForm {
+    margin-top: 90px;
+}
+
+.signIn-section .signIn-Card #passwordForm {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.signIn-section .signIn-Card #passwordForm .eyeIcon i {
+    cursor: pointer;
+    z-index: 3;
+}
+
+.signIn-section .signIn-Card #passwordForm .eyeIcon {
+    position: absolute;
+}
+.signIn-section .signIn-Card #passwordForm .eyeIcon i {
+    position: relative;
+    left: 390px;
+    top: 15px;
+    font-size: 25px;
+}
+
+.signIn-section .signIn-Card .form-control input {
+    width: 100%;
+    position: absolute; /* Position absolute for the input field */
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 15px;
+    background: transparent; /* Transparent background so the label placeholder is visible */
+    border: 2px solid #ccc;
+    transition: 0.1s ease; /* Smooth transition for focus effect */
+    z-index: 1;
+    
+}
+
+.signIn-section .signIn-Card  .form-control .falseSign.username {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    color: #c82014;
+}
+
+.signIn-section .signIn-Card .form-control .falseSign.email {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    color: #c82014;
+}
+
+.signIn-section .signIn-Card .form-control .falseSign.password {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    color: #c82014;
+}
+.signIn-section .signIn-Card .form-control .labelPlaceholder {
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 12px 10px 0px; /* Padding to position the label */
+    color: var(--darkprince-color);
+    background-color: white; /* Background color to cover the input field */
+    transition: 0.2s ease; /* Smooth transition for the label */
+}
+
+.signIn-section .signIn-Card .form-control input:focus, .signIn-section .signIn-Card .form-control input:valid {
+    border: 2px solid var(--starbucks-green); /* Change border color on focus */
+}
+
+.signIn-section .signIn-Card .form-control input:focus:required:invalid, 
+.signIn-section .signIn-Card .form-control input:focus:required:invalid + .labelPlaceholder,
+.signIn-section .signIn-Card .form-control input:focus:required:invalid + .labelPlaceholder span{
+    border-color: #c82014; /* Change border color on focus if invalid */
+    color: #c82014; /* Change label color on focus if invalid */
+    
+}
+.signIn-section .signIn-Card .form-control input:required:invalid,
+.signIn-section .signIn-Card .form-control input:required:invalid+.labelPlaceholder,
+.signIn-section .signIn-Card .form-control input:required:invalid+.labelPlaceholder span {
+        border-color: #c82014;
+        /* Change border color on focus if invalid */
+        color: #c82014;
+        /* Change label color on focus if invalid */
+        
+}
+
+.signIn-section .signIn-Card .form-control input:required:invalid + .labelPlaceholder{
+     /* line-height: 5px; Center the label vertically */
+    /* transform: translate(5px, -16px) scale(0.85); Move the label up and to the left */
+    /* padding-top: 12px; */
+    /* padding-bottom: 12px; */
+    /* z-index: 2; Ensure label is above other content */
+    transform: translate(5px, 10px) scale(1);
+}
+
+.signIn-section .signIn-Card .form-control input:invalid + .labelPlaceholder {
+        color: #c82014;
+        /* Change label color on focus */
+        line-height: 5px;
+        /* Center the label vertically */
+        transform: translate(5px, -16px) scale(0.85);
+        /* Move the label up and to the left*/
+        padding-top: 12px;
+        padding-bottom: 12px;
+        z-index: 2;
+        /* Ensure label is above other content */
+}
+
+.signIn-section .signIn-Card .form-control input:required:valid + .labelPlaceholder{
+    color: var(--starbucks-green); /* Change label color on focus */
+    line-height: 5px; /* Center the label vertically */
+    transform: translate(5px, -16px) scale(0.85); /* Move the label up and to the left*/
+    padding-top: 12px;
+    padding-bottom: 12px;
+    z-index: 2; /* Ensure label is above other content */
+}
+
+
+.important-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.important-information .starbucks-rewards-signInPage {
+    color: var(--starbucks-green);
+    font-size: medium;
+    font-weight: 600px;
+}
+.important-information .starbucks-rewards-info-signInPage {
+    display: inline-block;
+
+    align-self: center;
+    text-align: center;
+    font-size: small;
+}
+.important-information a {
+    margin-top: 20px;
+}
+
+
 
 /* Box One Section */  
 .box {
     margin-top: 20px;
     padding-bottom: 30px;
+}
+
+.important-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.important-information a {
+    margin-top: 20px;
+    flex-grow: 2;
 }
 
 /* Utility Classes */
@@ -300,7 +619,7 @@ img {
 }
 
 /* Button Styles Classes */
-.btn {
+.style-btn {
     border-radius: 50px;
     font-size: 1.1rem;
     font-weight: 700;
@@ -332,9 +651,19 @@ img {
     border-color: var(--palmleaf-green);
     color: var(--palmleaf-green);
 }
+
+.btn-starbuck-green-outline {
+    border-color: var(--starbucks-green);
+    color: var(--starbucks-green);
+}
 /* Button Hover Effects */
-.btn-dark-outline:hover , .btn-palmleaf-outline:hover, .btn-light-outline:hover{
-    background-color: rgba(0,0,0,0.2);
+ .btn-starbuck-green-outline:hover{
+    background-color: rgba(15, 148, 55, 0.2);
+}
+.btn-dark-outline:hover,
+.btn-palmleaf-outline:hover,
+.btn-light-outline:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .btn-dark:hover {
     background-color: var(--semilight-black);
@@ -506,5 +835,16 @@ span {
         padding: 5% 2% 0px;
         font-weight: 500;
     }   
-   
+
+    .box .text-box {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signIn-section .signIn-Card {
+            width: 100%;
+            border: none;
+            box-shadow: none;
+    }
 }

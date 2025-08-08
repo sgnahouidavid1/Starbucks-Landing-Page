@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account sign in: Starbucks Coffee Company</title>
+    <!-- Import Favicon icon  into the website -->
+    <link rel="shortcut icon" href="images/faviconbg-16x16.ico" type="image/x-ico">
+    <!-- Import styles.css file into the website -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <!-- Import font from Google Font into the wedsite -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Import Font Awesome for icons from cdnjs.com website -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Importing Flaticons.com for icons from the Flaticons website. -->
+    <link rel="stylesheet" href="path/to/your/css/flaticon.css">
+</head>
+<body>
+    <!-- Navigation Bar  Section-->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-menu">
+                <a href="homePage.html"><img src="images/starbucks-logo.png" alt="Starbucks Image Logo"></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sign In Card Section -->
+     <section class="signIn-section" style="padding-top: 25px;">
+        <h1 class="signInTitle text-center text-lg">Sign In or create an account</h1>
+        <div class="signIn-Card">
+            <p class=""><span>* </span>indicates required field</p>
+            <form id="signInForm" class="form-control" id="input-form">
+                <input class="inputField-username" type="text" required>
+                <div class="labelPlaceholder"><span>* </span>Username</div>
+                <span class="falseSign un ">
+                    <svg aria-hidden="true" class="valign-middle fieldStatus__icon" focusable="false"
+                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                        style="width: 20px; height: 20px; overflow: visible; fill: currentcolor;">
+                        <path
+                            d="M9.1005 3H14.8995C15.4299 3 15.9386 3.21071 16.3137 3.58579L20.4142 7.68629C20.7893 8.06136 21 8.57007 21 9.1005L21 14.8995C21 15.4299 20.7893 15.9386 20.4142 16.3137L16.3137 20.4142C15.9386 20.7893 15.4299 21 14.8995 21H9.10051C8.57007 21 8.06136 20.7893 7.68629 20.4142L3.58579 16.3137C3.21071 15.9386 3 15.4299 3 14.8995V9.10051C3 8.57007 3.21071 8.06136 3.58579 7.68629L7.68629 3.58579C8.06136 3.21071 8.57007 3 9.1005 3ZM16.7071 7.29289C16.3166 6.90237 15.6834 6.90237 15.2929 7.29289L12 10.5858L8.70711 7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L10.5858 12L7.29289 15.2929C6.90237 15.6834 6.90237 16.3166 7.29289 16.7071C7.68342 17.0976 8.31658 17.0976 8.70711 16.7071L12 13.4142L15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L13.4142 12L16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289Z">
+                        </path>
+                    </svg> Enter an username.
+                </span>
+            
+                <div id="emailForm" class="form-control" id="input-form">
+                    <input class="inputField-email" type="text" required>
+                    <div class="labelPlaceholder"><span>* </span>Email address</div>
+                    <span class="falseSign em">
+                        <svg aria-hidden="true" class="valign-middle fieldStatus__icon" focusable="false"
+                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                            style="width: 20px; height: 20px; overflow: visible; fill: currentcolor;">
+                            <path
+                                d="M9.1005 3H14.8995C15.4299 3 15.9386 3.21071 16.3137 3.58579L20.4142 7.68629C20.7893 8.06136 21 8.57007 21 9.1005L21 14.8995C21 15.4299 20.7893 15.9386 20.4142 16.3137L16.3137 20.4142C15.9386 20.7893 15.4299 21 14.8995 21H9.10051C8.57007 21 8.06136 20.7893 7.68629 20.4142L3.58579 16.3137C3.21071 15.9386 3 15.4299 3 14.8995V9.10051C3 8.57007 3.21071 8.06136 3.58579 7.68629L7.68629 3.58579C8.06136 3.21071 8.57007 3 9.1005 3ZM16.7071 7.29289C16.3166 6.90237 15.6834 6.90237 15.2929 7.29289L12 10.5858L8.70711 7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L10.5858 12L7.29289 15.2929C6.90237 15.6834 6.90237 16.3166 7.29289 16.7071C7.68342 17.0976 8.31658 17.0976 8.70711 16.7071L12 13.4142L15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L13.4142 12L16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289Z">
+                            </path>
+                        </svg> Enter an email address.
+                    </span>
+                
+                </div>
+                <div id="passwordForm" class="form-control" id="input-form">
+                    <div class="eyeIcon">
+                        <i id="eyeBtn" class="fa-regular fa-eye fa-beat-fade" style="color: #6b6b87;"></i>
+                    </div>
+                    <input class="inputField-password" type="password"  required >
+                    <div class="labelPlaceholder"><span>* </span>Password</div>
+                    <span class="falseSign pw">
+                        <svg aria-hidden="true" class="valign-middle fieldStatus__icon" focusable="false"
+                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                            style="width: 20px; height: 20px; overflow: visible; fill: currentcolor;">
+                            <path
+                                d="M9.1005 3H14.8995C15.4299 3 15.9386 3.21071 16.3137 3.58579L20.4142 7.68629C20.7893 8.06136 21 8.57007 21 9.1005L21 14.8995C21 15.4299 20.7893 15.9386 20.4142 16.3137L16.3137 20.4142C15.9386 20.7893 15.4299 21 14.8995 21H9.10051C8.57007 21 8.06136 20.7893 7.68629 20.4142L3.58579 16.3137C3.21071 15.9386 3 15.4299 3 14.8995V9.10051C3 8.57007 3.21071 8.06136 3.58579 7.68629L7.68629 3.58579C8.06136 3.21071 8.57007 3 9.1005 3ZM16.7071 7.29289C16.3166 6.90237 15.6834 6.90237 15.2929 7.29289L12 10.5858L8.70711 7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L10.5858 12L7.29289 15.2929C6.90237 15.6834 6.90237 16.3166 7.29289 16.7071C7.68342 17.0976 8.31658 17.0976 8.70711 16.7071L12 13.4142L15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L13.4142 12L16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289Z">
+                            </path>
+                        </svg> Enter a password.
+                    </span>
+                </div>
+                <div class="signIn_ChkBox_container">
+                    <input type="checkbox" id="signIn_ChkBox" name="signIn_ChkBox"/>
+                    <label for="signIn_ChkBox">Keep me signed in.</label> <a href="signInPage.html">Details</a>
+                    <a class="forget_your_username" href="signInPage.html">Forget your username?</a>
+                    <a class="forget_your_password" href="signInPage.html">Forget your password?</a>
+                </div>
+                <input type="button" href="signInPage.html" class="signIn_btn btn style-btn " value="Sign in">
+            </form>
+            
+        </div>
+     </section>
+    <!-- Info Section-->
+    <section class="important-information">
+        <div class="starbucks-imp-info">
+            <p class="starbucks-rewards-signInPage text-sm text-center">JOIN STARBUCKS<span class="REGISTERED-TRADEMARK"></span> REWARDS</p>
+            <p class="starbucks-rewards-info-signInPage text-sm text-center">As a member, start earning free food and drinks, 
+            unlock our best offers and celebrate your birthday with a treat from
+            us. Best of all, it's free to join.</p>
+        </div>
+        <a href="signInPage.html" class="style-btn btn-starbuck-green-outline">Join now</a>
+    </section>
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="footer-links">
+            <div class="footer-container">
+                <ul>
+                    <div class="footer-group-header">
+                        <li class="links-title text-xmd">About Us</li>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="link-group open">
+                        <li><a href="homePage.html" class="link text-sm">Our Company</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Our Coffee</a></li>
+                        <li><a href="homePage.html" class="link text-sm">About Starbucks</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Starbucks Archive</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Investor Relations</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Customer Service</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Contact Us</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <ul>
+                    <div class="footer-group-header">
+                        <li class="links-title text-xmd">Careers</li>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="link-group">
+                        <li><a href="homePage.html" class="link text-sm">Culture and Values</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Belonging at Starbucks</a></li>
+                        <li><a href="homePage.html" class="link text-sm">College Achievement Plan</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Alummi Community</a></li>
+                        <li><a href="homePage.html" class="link text-sm">U.S Careers</a></li>
+                        <li><a href="homePage.html" class="link text-sm">International Careers</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <ul>
+                    <div class="footer-group-header">
+                        <li class="links-title text-xmd">Social Impact</li>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="link-group">
+                        <li><a href="homePage.html" class="link text-sm">Communities</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Starbucks Foundation</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Sustainability</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Environmental and Social Impact Reporting</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <ul>
+                    <div class="footer-group-header">
+                        <li class="links-title text-xmd">For Business Partners</li>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="link-group">
+                        <li><a href="homePage.html" class="link text-sm">Landlord Support Center</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Supplies</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Corporate Gift Card Sales</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Office and Foodservice Coffee</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <ul>
+                    <div class="footer-group-header">
+                        <li class="links-title text-xmd">Order and Pick Up</li>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="link-group">
+                        <li><a href="homePage.html" class="link text-sm">Order on the App</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Order on the Web</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Delivery</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Order and Pick Up Options</a></li>
+                        <li><a href="homePage.html" class="link text-sm">Explore and Find Coffee at Home</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="icon-container">
+            <a href="homePage.html"><img src="images/spotify.png" alt="Spotify Icon Image"></a>
+            <a href="homePage.html"><img src="images/pinterest.png" alt="Pinterest Icon Image"></a>
+            <a href="homePage.html"><img src="images/instagram.png" alt="Instagram Icon Image"></a>
+            <a href="homePage.html"><img src="images/facebook.png" alt="Facebook Icon Image"></a>
+            <a href="homePage.html"><img src="images/youtube.png" alt="Youtube Icon Image"></a>
+            <a href="homePage.html"><img src="images/twitter.png" alt="Twitter Icon Image"></a>
+        </div>
+        <div class="link-container">
+            <ul>
+                <li><a class="other-link text-sm" href="homePage.html">Privacy Notice</a></li>
+                <li><a class="other-link text-sm" href="homePage.html">Consumer Health Privacy Notice</a></li>
+                <li><a class="other-link text-sm" href="homePage.html">Terms of Use</a></li>
+                <li><a class="other-link text-sm" href="homePage.html">Do Not Share My Personal Information</a></li>
+                <li><a class="other-link text-sm" href="homePage.html">CA Supply Chain Act</a></li>
+                <li><a class="other-link text-sm" href="homePage.html">Privacy Notice</a></li>
+                <li><a class="other-link text-sm" href="homePage.html">Cookie Preferences</a></li>
+            </ul>
+    
+        </div>
+        <p class="text-sm" style="color: #6b6b87;"><span class="COPYRIGHT-TRADEMARK"></span> 2025 Starbucks Coffee Company.
+            All rights reserved.</p>
+    </section>
+    <!-- Import javascript.js file into the website -->
+    <script src="js/javascriptSignIn.js"></script>
+</body>
+</html>
